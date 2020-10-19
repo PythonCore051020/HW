@@ -1,0 +1,9 @@
+a = 59
+b = 598
+print("a1 = ",a)
+print("b1 = ",b)
+a = a + b
+b = a - b
+a = a - b
+print("a2 = ",a)
+print("b2 = ",b)
