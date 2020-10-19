@@ -10,3 +10,4 @@ q3 = input('Where do you live? ')
 Where do you live? Lviv
 print ('You live in',q3)
 You live in Lviv
+
