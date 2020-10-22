@@ -35,7 +35,7 @@ def count_sheeps(sheep):
     return count
 #6
 def correct_tail(body, tail):
- return body.endswith(tail)
+ return body[-1] == tail
 
 
 
