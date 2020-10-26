@@ -1,2 +1,0 @@
-a = 2547
-print(sum(map(int,str(a))))
