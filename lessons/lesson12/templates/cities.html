@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/city">create city</a>
+{% for city in date %}
+<li>{{ city.id }} - <a href="/city/{{ city.id }}"> {{ city.name }}</a> - {{city.size}}
+    <a href="/city/update/{{ city.id }}">update</a>
+    <a href="/city/delete/{{ city.id }}">delete</a>
+</li>
+{% endfor %}
+</body>
+</html>
