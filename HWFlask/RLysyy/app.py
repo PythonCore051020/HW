@@ -29,7 +29,7 @@ class Room(db.Model):
 
     @staticmethod
     def get_by_id(pk):
-        room_row = Room.query.filter_by(id=pk).first()
+        room_row = Room.query.filter_by(room_id=pk).first()
         return room_row
 
     @staticmethod
@@ -71,7 +71,7 @@ def room():
 @app.route('/room/list')
 def room_list():
     rooms = Room.query.all()
-    return render_template('room/room_list.html', date=rooms)
+    return render_template('room/room_list.html', rooms=rooms)
 
 
 @app.route('/room/<pk>')
