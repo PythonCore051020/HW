@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <a href="/city/list">go to cities</a>
+</p>
+
+id: {{ date.id }} <br>
+<form method="post">
+    <input type=text name=city value="{{date.name}}">
+    <input type=text name=size value="{{date.size}}">
+    <input type=submit value="update">
+</form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Countries</title>
+</head>
+<body>
+<!--<a href="/city">create city</a>-->
+{% for country in countries %}
+<li>{{ country.id }} - <a href="/country/{{ country.id }}"> {{ country.name }}</a>
+<!--    <a href="/city/update/{{ country.id }}">update</a>-->
+<!--    <a href="/city/delete/{{ country.id }}">delete</a>-->
+</li>
+{% endfor %}
+</body>
+</html>

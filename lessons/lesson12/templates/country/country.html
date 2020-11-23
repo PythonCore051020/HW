@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <a href="/country/list">go to cities</a>
+</p>
+id:{{ country.id }} <br>
+name:{{ country.name }} <br>
+{% for city in country.cities %}
+<li>{{ city.id }} - <a href="/city/{{ city.id }}"> {{ city.name }}</a> - {{city.size}}</li>
+{% endfor %}
+</body>
+</html>
