@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+
+
+{% extends "base.html" %}
+
+{% block title %}
+    room list
+{% endblock %}
+{% block content %}
 
 <form method="post">
     <input type=text name=room>
     <input type=text name=capacity>
     <input type=submit value="create">
 </form>
-</body>
-</html>
+{% endblock %}

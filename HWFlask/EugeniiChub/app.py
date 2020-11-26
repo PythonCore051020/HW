@@ -137,11 +137,15 @@ class User(db.Model):
 # def start_window():
 #     return redirect('stwin.html')
 
+@app.route('/')
+def home():
+    return redirect('/Room/room/')
+
 
 @app.route('/Room/room/', methods=['GET', 'POST'])
 def room():
     if request.method == 'GET':
-        return render_template('Room/user_create.html')
+        return render_template('Room/room_create.html')
     if request.method == 'POST':
         room_name = request.form['room']
         capacity = request.form['capacity']
@@ -149,7 +153,7 @@ def room():
         room = Room.create(room_name=room_name, capacity=capacity)
         if room:
             return redirect('/Room/room/list')
-        return render_template('Room/user_create.html')
+        return render_template('Room/room_create.html')
 
 
 @app.route('/Room/room/list')

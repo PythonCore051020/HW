@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<p>
-    <a href="/Users/user/list">go to users</a>
-</p>
+
+
+{% extends "base.html" %}
+
+
+{% block title %}
+room list
+{% endblock %}
+
+
+{% block content %}
 id:{{ date.id }} <br>
 first_name:{{date.first_name}} <br>
 last_name:{{date.last_name}} <br>
 age:{{date.age}} <br>
-</body>
-</html>
+{% endblock %}
