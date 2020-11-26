@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <a href="/Users/user/list">go to users</a>
+</p>
+
+id: {{ date.id }} <br>
+<form method="post">
+    <input type=text name=first_name value="{{date.first_name}}">
+    <input type=text name=last_name value="{{date.last_name}}">
+    <input type=number name=age value="{{date.age}}">
+    <input type=submit value="update">
+</form>
+</body>
+</html>

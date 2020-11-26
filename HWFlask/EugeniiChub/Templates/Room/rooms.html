@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/Room/room">create room</a>
+{% for room in date %}
+<li>{{ room.id }} - <a href="/Room/room/{{ room.id }}"> {{ room.room_name }}</a> - {{room.capacity}} -
+    <a href="/Room/room/update/{{ room.id }}">update</a>
+    <a href="/Room/room/delete/{{ room.id }}">delete</a>
+</li>
+{% endfor %}
+</body>
+</html>

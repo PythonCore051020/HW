@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <a href="/Room/room/list">go to rooms</a>
+</p>
+
+id: {{ date.id }} <br>
+<form method="post">
+    <input type=text name=room value="{{date.room_name}}">
+    <input type=text name=capacity value="{{date.capacity}}">
+    <input type=submit value="update">
+</form>
+</body>
+</html>
