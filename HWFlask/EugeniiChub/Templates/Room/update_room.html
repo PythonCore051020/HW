@@ -1,0 +1,18 @@
+
+
+
+
+{% extends "base.html" %}
+
+{% block title %}
+    room list
+{% endblock %}
+{% block content %}
+
+id: {{ date.id }} <br>
+<form method="post">
+    <input type=text name=room value="{{date.room_name}}">
+    <input type=text name=capacity value="{{date.capacity}}">
+    <input type=submit value="update">
+</form>
+{% endblock %}
