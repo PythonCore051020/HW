@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update room</title>
+</head>
+<body>
+<p>
+    <a href="/room/list">go to rooms</a>
+</p>
+
+id: {{ rooms.room_id }} <br>
+<form method="post">
+    <input type=text name=name value="{{rooms.room_name}}">
+    <input type=text name=capacity value="{{rooms.room_capacity}}">
+    <input type=submit value="update">
+</form>
+</body>
+</html>
