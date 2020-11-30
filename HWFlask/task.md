@@ -1,10 +1,11 @@
 створити класи
+base:
 
-Room()
+Room(base)
 - name (str)
 - capacity (int)
 
-User()
+User(base)
 - firstname (str)
 - lastname (str)
 - age (int)
@@ -12,11 +13,11 @@ User()
 Teacher(User)
 - position (str)
 
-Group ()
+Group (base)
 - name (str)
 - members (list(User))
 
-Sheduler ()
+Sheduler (base)
 - room ()
 - lesson (Lesson)
 - group (Group)

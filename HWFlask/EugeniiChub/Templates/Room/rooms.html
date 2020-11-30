@@ -1,0 +1,16 @@
+
+
+{% extends "Rooms/base.html" %}
+
+{% block title %}
+    room list
+{% endblock %}
+{% block content %}
+
+    {% for room in date %}
+        <li>{{ room.id }} - <a href="/Room/room/{{ room.id }}"> {{ room.room_name }}</a> - {{room.capacity}} -
+            <a href="/Room/room/update/{{ room.id }}">update</a>
+            <a href="/Room/room/delete/{{ room.id }}">delete</a>
+        </li>
+    {% endfor %}
+{% endblock %}

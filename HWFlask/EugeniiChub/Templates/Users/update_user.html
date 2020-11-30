@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+room list
+{% endblock %}
+
+
+{% block content %}
+id: {{ date.id }} <br>
+<form method="post">
+    <input name=first_name type=text value="{{date.first_name}}">
+    <input name=last_name type=text value="{{date.last_name}}">
+    <input name=age type=number value="{{date.age}}">
+    <input type=submit value="update">
+</form>
+{% endblock %}

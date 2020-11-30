@@ -9,6 +9,42 @@ db = SQLAlchemy(app)
 CITES = []
 
 
+class Base(db.Model):
+    __abstract__ = True
+
+    @classmethod
+    def get_by_id(cls, pk):
+        return cls.query.filter_by(id=pk).first()
+
+    @classmethod
+    def delete_by_id(cls, pk):
+        element = cls.get_by_id(pk)
+        db.session.delete(element)
+        db.session.commit()
+
+    @classmethod
+    def update(cls, pk, **data):
+        element = cls.get_by_id(pk)
+        for key, value in data.items():
+            setattr(element, key, value)
+        try:
+            db.session.commit()
+        except Exception as e:
+            print(f"{cls}, pk:{pk} data:{data}")
+
+    @classmethod
+    def create(cls, **data):
+        element = cls()
+        for key, value in data.items():
+            setattr(element, key, value)
+        try:
+            db.session.add(element)
+            db.session.commit()
+        except Exception as e:
+            print(f"{cls}  data:{data}")
+        return element
+
+
 class City(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Countries</title>
+</head>
+<body>
+<a href="/room">create room</a>
+
+{% for room in rooms %}
+<li>{{ room.id }} - <a href="/room/{{ room.room_id }}"> {{ room.room_name }}</a>
+</li>
+{% endfor %}
+</body>
+</html>
