@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+
+<a href="/user">submit user</a>
+{% for user in date %}
+<li>{{ user.firstname }} - {{user.surname}} - {{user.age}}</li>
+{% endfor %}
+
+</body>
+</html>
